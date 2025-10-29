@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NAPPIER-XMD Deployment Hub</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap');
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+    body {
+      background-color: #000;
+      color: #fff;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      min-height: 100vh;
+      padding: 20px;
+    }
+    h1 {
+      font-size: 2.6rem;
+      background: linear-gradient(90deg, #ff3c3c, #8b5cf6, #00b4d8);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin-top: 35px;
+      animation: glow 3s ease-in-out infinite alternate;
+    }
+    @keyframes glow {
+      from { text-shadow: 0 0 10px #ff3c3c, 0 0 20px #8b5cf6, 0 0 30px #00b4d8; }
+      to { text-shadow: 0 0 20px #ff3c3c, 0 0 40px #8b5cf6, 0 0 60px #00b4d8; }
+    }
+    .status-bar {
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      background: rgba(255, 255, 255, 0.05);
+      border-radius: 20px;
+      padding: 10px 20px;
+      margin-top: 10px;
+      font-size: 14px;
+      color: #ccc;
+    }
+    section {
+      width: 90%;
+      max-width: 500px;
+      background: rgba(255,255,255,0.05);
+      padding: 20px;
+      border-radius: 15px;
+      margin-top: 30px;
+      box-shadow: 0 0 15px rgba(255,255,255,0.1);
+      backdrop-filter: blur(5px);
+      transition: transform 0.3s ease;
+    }
+    section:hover {
+      transform: scale(1.02);
+    }
+    .section-title {
+      font-size: 1.4rem;
+      background: linear-gradient(90deg, #00b4d8, #8b5cf6, #ff3c3c);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      text-align: center;
+      margin-bottom: 15px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+    button, a.btn {
+      display: block;
+      width: 100%;
+      padding: 12px;
+      text-align: center;
+      margin: 8px 0;
+      border: none;
+      border-radius: 10px;
+      font-size: 15px;
+      cursor: pointer;
+      text-decoration: none;
+      color: white;
+      font-weight: 500;
+      transition: 0.4s;
+    }
+    .btn-green { background-color: #00b894; box-shadow: 0 0 10px #00b894; }
+    .btn-green:hover { background-color: #019374; transform: scale(1.05); }
+    .btn-dark { background-color: #1e1e1e; box-shadow: 0 0 10px #333; }
+    .btn-dark:hover { background-color: #333; transform: scale(1.05); }
+    .btn-purple { background-color: #8b5cf6; box-shadow: 0 0 10px #8b5cf6; }
+    .btn-purple:hover { background-color: #6d28d9; transform: scale(1.05); }
+    .btn-blue { background-color: #2563eb; box-shadow: 0 0 10px #2563eb; }
+    .btn-blue:hover { background-color: #1d4ed8; transform: scale(1.05); }
+    input {
+      width: 100%;
+      padding: 10px;
+      border-radius: 10px;
+      border: none;
+      margin-bottom: 10px;
+      text-align: center;
+      outline: none;
+      font-size: 15px;
+    }
+    footer {
+      margin-top: 40px;
+      text-align: center;
+      font-size: 14px;
+      color: #aaa;
+    }
+    footer span {
+      background: linear-gradient(90deg, #ff3c3c, #8b5cf6, #00b4d8);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>NAPPIER</h1>
+  <div class="status-bar">
+    <div>🔋 100%</div>
+    <div>🌐 154.159.252.208</div>
+  </div>
+
+  <section>
+    <div class="section-title">🚀 Deployment Hub</div>
+    <p style="text-align:center;color:#ccc;">Deploy your NAPPIER-XMD bot easily with GitHub verification and instant setup.</p>
+    <a href="#" class="btn btn-green">🔗 Get Session Pairing Code</a>
+    <a href="https://github.com/nappier2/NAPPIER-MD.git" target="_blank" class="btn btn-dark">💻 View Latest Repository</a>
+    <a href="https://whatsapp.com/channel/0029VbBRLb04dTnRzJI0781D" target="_blank" class="btn btn-blue">📢 Join WhatsApp Channel</a>
+  </section>
+
+  <section>
+    <div class="section-title">⚙️ Deploy NAPPIER-XMD</div>
+    <p style="text-align:center;color:#ccc;">Enter your GitHub username to deploy your own instance securely.</p>
+    <input type="text" placeholder="Enter GitHub Username" id="githubUser" />
+    <button class="btn btn-purple" onclick="deploy()">🚀 DEPLOY</button>
+  </section>
+
+  <section>
+    <div class="section-title">ℹ️ About NAPPIER-XMD</div>
+    <p style="text-align:center;color:#aaa;">
+      NAPPIER-XMD is a powerful WhatsApp bot with advanced features for automation, moderation, and entertainment.
+      Deploy your own instance easily and enjoy next-level performance!
+    </p>
+  </section>
+
+  <footer>
+    💬 DM for free guidance and support ❤️✨<br>
+    ⚡ Designed & Developed by <span>Kathara</span> ⚡
+  </footer>
+
+  <script>
+    function deploy() {
+      const user = document.getElementById('githubUser').value.trim();
+      if (user) {
+        window.open(`https://github.com/${user}`, '_blank');
+      } else {
+        alert('Please enter your GitHub username first!');
+      }
+    }
+  </script>
+</body>
+</html>
